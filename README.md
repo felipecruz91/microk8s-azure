@@ -1,9 +1,10 @@
 # microk8s-azure
 
+Creates an Ubuntu VM in Azure with the latest version of Microk8s installed.
+
 ## Deploy infrastructure
 
 ```cli
-
 az login
 
 az account list --output table
