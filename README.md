@@ -2,6 +2,10 @@
 
 Creates an Ubuntu VM in Azure with the latest version of Microk8s installed.
 
+## Configure parameters file
+
+First of all, set the `adminUsername`, `adminPassword`, and `virtualMachineSize` in the [parameters file](https://github.com/felipecruz91/microk8s-azure/blob/master/azuredeploy.parameters.json).
+
 ## Deploy infrastructure
 
 ```cli
