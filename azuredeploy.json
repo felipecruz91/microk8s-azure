@@ -187,7 +187,7 @@
                 "autoUpgradeMinorVersion": true,
                 "settings": {
                     "fileUris": [
-                        "https://gist.githubusercontent.com/felipecruz91/952631b5b5e5cb7196675540aa32839e/raw/5f287f3faa3ff11351905d95810435256b582c9f/install-docker-and-microk8s.sh"
+                        "https://gist.githubusercontent.com/felipecruz91/952631b5b5e5cb7196675540aa32839e/raw/1dd5646ccb3b553d73bea473dc6579af08b961f8/install-docker-and-microk8s.sh"
                     ],
                     "commandToExecute": "[concat('sudo sh install-docker-and-microk8s.sh', ' ', parameters('adminUsername'))]"
                 }
