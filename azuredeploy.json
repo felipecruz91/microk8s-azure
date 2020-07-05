@@ -187,7 +187,7 @@
                 "autoUpgradeMinorVersion": true,
                 "settings": {
                     "fileUris": [
-                        "https://gist.githubusercontent.com/felipecruz91/1d6b2ac7865457efda845e3bc0166bc7/raw/9c6b49ee455b9d951b321d652b2dc4f5612202e4/install-docker.sh"
+                        "https://gist.githubusercontent.com/felipecruz91/1d6b2ac7865457efda845e3bc0166bc7/raw/6b738b4dfa681cc25fad19336a7255f7aedf1de2/install-docker.sh"
                     ],
                     "commandToExecute": "sh install-docker.sh"
                 }
