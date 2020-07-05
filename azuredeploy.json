@@ -174,27 +174,6 @@
         },
         {
             "type": "Microsoft.Compute/virtualMachines/extensions",
-            "name": "[concat(variables('vmName'),'/installdocker')]",
-            "apiVersion": "2015-05-01-preview",
-            "location": "[resourceGroup().location]",
-            "dependsOn": [
-                "[concat('Microsoft.Compute/virtualMachines/', variables('vmName'))]"
-            ],
-            "properties": {
-                "publisher": "Microsoft.Azure.Extensions",
-                "type": "CustomScript",
-                "typeHandlerVersion": "2.0",
-                "autoUpgradeMinorVersion": true,
-                "settings": {
-                    "fileUris": [
-                        "https://gist.githubusercontent.com/felipecruz91/1d6b2ac7865457efda845e3bc0166bc7/raw/6b738b4dfa681cc25fad19336a7255f7aedf1de2/install-docker.sh"
-                    ],
-                    "commandToExecute": "sh install-docker.sh"
-                }
-            }
-        },
-        {
-            "type": "Microsoft.Compute/virtualMachines/extensions",
             "name": "[concat(variables('vmName'),'/installmicrok8s')]",
             "apiVersion": "2015-05-01-preview",
             "location": "[resourceGroup().location]",
@@ -208,9 +187,9 @@
                 "autoUpgradeMinorVersion": true,
                 "settings": {
                     "fileUris": [
-                        "https://gist.githubusercontent.com/felipecruz91/0489200fe7ac9d9a781cfa67e8fd9795/raw/0d5b5df1d9db9b1d649588ab64ccee75c6adba8a/install-microk8s.sh"
+                        "https://gist.githubusercontent.com/felipecruz91/952631b5b5e5cb7196675540aa32839e/raw/162826bdf5ed17eefa6b0d6ac97e1bd4c1c02bc7/install-docker-and-microk8s.sh"
                     ],
-                    "commandToExecute": "sh install-microk8s.sh"
+                    "commandToExecute": "sh install-docker-and-microk8s.sh"
                 }
             }
         }
