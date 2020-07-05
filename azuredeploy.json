@@ -174,7 +174,28 @@
         },
         {
             "type": "Microsoft.Compute/virtualMachines/extensions",
-            "name": "[concat(variables('vmName'),'/newuserscript')]",
+            "name": "[concat(variables('vmName'),'/installdocker')]",
+            "apiVersion": "2015-05-01-preview",
+            "location": "[resourceGroup().location]",
+            "dependsOn": [
+                "[concat('Microsoft.Compute/virtualMachines/', variables('vmName'))]"
+            ],
+            "properties": {
+                "publisher": "Microsoft.Azure.Extensions",
+                "type": "CustomScript",
+                "typeHandlerVersion": "2.0",
+                "autoUpgradeMinorVersion": true,
+                "settings": {
+                    "fileUris": [
+                        "https://gist.githubusercontent.com/felipecruz91/1d6b2ac7865457efda845e3bc0166bc7/raw/9c6b49ee455b9d951b321d652b2dc4f5612202e4/install-docker.sh"
+                    ],
+                    "commandToExecute": "sh install-docker.sh"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "name": "[concat(variables('vmName'),'/installmicrok8s')]",
             "apiVersion": "2015-05-01-preview",
             "location": "[resourceGroup().location]",
             "dependsOn": [
