@@ -174,7 +174,7 @@
         },
         {
             "type": "Microsoft.Compute/virtualMachines/extensions",
-            "name": "[concat(variables('vmName'),'/installmicrok8s')]",
+            "name": "[concat(variables('vmName'),'/installdocker')]",
             "apiVersion": "2015-05-01-preview",
             "location": "[resourceGroup().location]",
             "dependsOn": [
@@ -187,9 +187,9 @@
                 "autoUpgradeMinorVersion": true,
                 "settings": {
                     "fileUris": [
-                        "https://gist.githubusercontent.com/felipecruz91/952631b5b5e5cb7196675540aa32839e/raw/e00a2ca9674e7a6aabc0f6f322c375dbcafc6633/install-docker-and-microk8s.sh"
+                        "https://gist.githubusercontent.com/felipecruz91/1d6b2ac7865457efda845e3bc0166bc7/raw/5fbf511d2e12ba26b9f07e53c56770d75f2323af/install-docker.sh"
                     ],
-                    "commandToExecute": "[concat('sudo sh install-docker-and-microk8s.sh', ' ', parameters('adminUsername'))]"
+                    "commandToExecute": "[concat('sudo sh install-docker.sh', ' ', parameters('adminUsername'))]"
                 }
             }
         }
